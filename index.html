@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>6Estates FinDDR @ ACM ICAIF 2025</title>
+
+    <!-- favicon -->
+    <link href="favicon.png" rel=icon>
+
+    <!-- web-fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,500' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Style CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar">
+<div id="main-wrapper">
+    <!-- Page Preloader -->
+    <div id="preloader">
+        <div id="status">
+            <div class="status-mes"></div>
+        </div>
+    </div>
+
+    <header class="header">
+        <!-- Navigation -->
+        <nav class="navbar main-menu" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--a class="navbar-brand page-scroll" href="#page-top"><img src="img/logo.png" alt=""></a-->
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                    <ul class="nav navbar-nav">
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                        <li class="hidden"><a href="#page-top"></a></li>
+                        <li><a class="page-scroll" href="#section-intro">Overview</a></li>
+
+                        <li><a class="page-scroll" href="#section-task">Task and Dataset</a></li>
+
+                        <li><a class="page-scroll" href="#section-eval">Evaluation</a></li>
+                        
+                        <li><a class="page-scroll" href="#section-lb">Leaderboard</a></li>
+
+                        <li><a class="page-scroll" href="#section-submission">Submission</a></li>
+
+                        <li><a class="page-scroll" href="#section-agenda">Timeline</a></li>
+                        <!--li><a class="page-scroll" href="#section-ajenda">Agenda</a></li-->
+                        <li><a class="page-scroll" href="#section-organization">Organizers</a></li>
+                        <li><a class="page-scroll" href="#section-venue">Venue</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+        <!-- .nav -->
+
+    </header>
+
+    <div class="jumbotron text-center">
+        <div class="content">
+            <h1>FinDDR 2025</h1>
+            <h2>6Estates Financial Document Deep Research Grand Challenge</h2>
+            <br>
+            <!-- <h3>July 17, 2025 (Padua, Italy)</h3> -->
+            <div class="event-date">Nov 15-18, 2025, Singapore </div>
+            <p class="leadtitle">Co-located with The 6th International ACM International Conference on AI in Finance (ICAIF)</p>
+            
+            <a href="https://icaif25.org/" target="_blank" class="btn btn-primary btn-lg" style="background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%); color: #222; font-weight: bold; border: none; box-shadow: 0 4px 12px rgba(255,204,51,0.2);">
+                ACM ICAIF 2025
+            </a>
+    
+            
+        </div>
+    </div>
+    <!-- .Jumbotron-->
+
+    <section id="section-intro" class="section-wrapper about-event">
+        <div class="container">
+        <div class="col-md-12">
+             <div class="row ">
+                <div class="section-title">
+                        <h1>Overview</h1>
+                </div>
+            </div>
+
+            <div class="row">
+               
+                    
+                    <p class="lead">
+                        Financial analysis is crucial for informed decision-making among stakeholders of public companies. Yet extracting insight from lengthy and complex annual reports remains a significant challenge. 
+Utilizing the proven capabilities of Deep Research Agents, we propose the Financial Document Deep  Research (FinDDR) Challenge, which adopts similar deep research methodologies in question design and evaluation frameworks. The FinDDR Challenge introduces a richly structured, industry-diverse dataset and requires participants to generate comprehensive, sectioned research reports. This is accomplished through a hierarchical, stepwise reasoning framework that closely emulates the analytical methodologies employed by professional financial analysts. In conclusion, the FinDDR Challenge seeks to establish new benchmarks for complex document-based deep research in financial AI applications, fostering progress and collaboration across both academic and industry communities.
+                    </p>
+
+                   
+                </div>
+            
+            </div>
+        </div>
+    </section>
+    <!-- .about-event -->
+
+
+<style type="text/css">
+table.gridtable {
+    font-family: verdana,arial,sans-serif;
+    font-size:14px;
+    color:#333333;
+    border-width: 1px;
+    border-color: #666666;
+    border-collapse: collapse;
+}
+table.gridtable th {
+    border-width: 1px;
+    padding: 1px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #dedede;
+}
+table.gridtable td {
+    border-width: 1px;
+    padding: 1px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #ffffff;
+}
+.table th, .table td {
+    color: #000; /* 设置黑色字体 */
+}
+
+.paper {
+    margin-bottom: 20px;
+}
+.title::before {
+    content: "• ";
+    color: #003366;
+    margin-right: 5px;
+}
+.title {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: left; /* 明确设置左对齐 */
+}
+.authors {
+    margin-top: 3px;
+    font-size: 16px;
+    text-align: left; /* 明确设置左对齐 */
+    color: #000000; /* 设置为黑色 */
+    margin-left: 18px; /* 与标题对齐 */
+}
+
+
+
+</style>
+
+    <section id="section-task" class="section-wrapper about-event gray-bg">
+        <div class="container">
+             <div class="col-md-12">
+                    <div class="row ">
+                        <div class="section-title">
+                                <h1>Task and Dataset</h1>
+                        </div>
+                    </div>
+              
+                <div class="row">
+                        <p class="lead">
+                           The task requires participants to generate a comprehensive and deep research report based on a pair of multi-year annual reports of a listed company following a desired report structure. 
+                           This structure is designed to emulate the analytical workflow of professional financial
+                           analysts, progressing from basic fact extraction,  to calculation of financial indicators, to in-depth interpretation and summarization. 
+                           
+                           <br>
+                           In the following, we provide the detailed description about the input raw annual report and the hierarchical structure of the desired output research report:
+
+                            <ul>
+                                <li>
+                                    <strong>Raw Annual Report（<a href="https://docs.google.com/spreadsheets/d/1ZuWdO2Fbu5mEfZar6kJYmRryXg41rUlVPxJDIctmYTI/edit?usp=drive_link" target="_blank">Download</a>）</strong>
+                                    <ul>
+                                        <li> <strong>Various Markets</strong>: 8 markets, including USA, UK, China,  Hong Kong, Australia, Singapore, Indonesian, and Malaysia. </li>
+                                        <li> <strong>Diverse Industries</strong>: 15+ industries, incuding Property & Real Estate, Healthcare & Medical Services, Consumer Goods & Services, Technology, Aerospace & Defense, Telecommunications, Oil & Gas, Transport & Logistics,  Mining & Resources, Plantation, Utilities  </li>
+                                        <li> <strong>Multiple Lngualistic</strong>: 4 languages, including English, Simple Chinese, Traditional Chinese and Indonesia Bahasa </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <strong>Structure of Deep Research Report （<a href="https://docs.google.com/spreadsheets/d/1MHg2Q0hdh0ByyUC_TAUOjwCULh7QguoQnRd2gAT0fX0/edit?usp=sharing" target="_blank">Download</a>）</strong>
+                                    <ul>
+                                        <li><strong>Company Overview</strong>: This section provides a concise overview of the company, including its basic information, industry background, key strengths, and strategic direction.</li>
+                                        <li><strong>Financial Performance</strong>: This section presents a detailed
+                                            analysis of the company’s financial health, including financial statements and performance metrics, to assess profitability, liquidity, and solvency. </li>
+                                        
+                                        <li><strong>Business Analysis</strong>: This section provides a summary of
+                                            a company’s business performance and strategies, offering
+                                            readers a comprehensive understanding of the company’s
+                                            business operations, competitive strengths, innovation ef-
+                                            forts, and strategies.</li>
+
+                                        <li><strong>Risk Factors</strong>: This section identifies and discusses the prin-
+                                            cipal risks the company faces, including market, financial,
+                                            operational, and regulatory risks, along with the strategies
+                                            in place to manage them.</li>
+
+                                        <li><strong>Corporate Governance</strong>: This section outlines the company’s governance framework, including the board of direc-
+                                            tors, executive leadership, governance policies, and practices,
+                                            ensuring transparency and accountability.</li>
+                                        
+                                         <li><strong>Future Outlook</strong>: This section provides management’s pro-
+                                        jections and strategic plans for the future, including antic-
+                                        ipated market trends, growth opportunities, and the company’s road map for achieving its objectives.</li>
+                        
+                                    </ul>
+                                </li>
+                                
+                            </ul>
+                        </p>
+                        <p class="lead">
+                            <strong>FinDDR Dataset</strong>
+                        </p>
+
+                        <p class="lead">
+                            For every market in the FinDDR Dataset, we provide an equal number of companies from various industries. Two annual reports (2023 and 2024) for each company are provided. 
+
+                            The FinDDR Dataset is divided into sample, validation, and test sets. Participants can develop their methods using the sample set and valuate performance on the validation and test sets.
+
+                            For the sample set, we will provide the raw annual reports and the corresponding sample research reports (in both Markdown and Word formats).
+                            
+                            For the validation and test sets, only the raw annual reports will be provided.
+
+                        </p>
+                    
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th>Market</th>
+                                        <th>Sample Set</th>
+                                        <th>Validation Set</th>
+                                        <th>Test Set</th>
+                                    </tr>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>US</td>
+                                        <td>1</td>
+                                        <td>6</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>UK</td>
+                                        <td>1</td>
+                                        <td>6</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>China</td>
+                                        <td>1</td>
+                                        <td>6</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hong Kong</td>
+                                        <td>1</td>
+                                        <td>6</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Singapore</td>
+                                        <td>1</td>
+                                        <td>6</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Australia</td>
+                                        <td>1</td>
+                                        <td>6</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Indonesian</td>
+                                        <td>1</td>
+                                        <td>6</td>
+                                        <td>6</td>
+                                    </tr> 
+                                    <tr>
+                                        <td>Malaysia</td>
+                                        <td>1</td>
+                                        <td>6</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total</td>
+                                        <td>8</td>
+                                        <td>48</td>
+                                        <td>48</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-eval" class="section-wrapper about-event ">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="section-title">
+                        <h1>Evaluation</h1>
+                    </div>
+                </div>
+                We apply two metrics to evaluate different sections, the actual metrics used for each section can be found in the defined  <a href="https://docs.google.com/spreadsheets/d/1MHg2Q0hdh0ByyUC_TAUOjwCULh7QguoQnRd2gAT0fX0/edit?usp=sharing" target="_blank">structure of the deep research report</a>）.
+
+                <div class="row">
+                    <ul>
+                        <li> <strong>Accuracy</strong>: we will use advanced LLMs to
+                            judge if the submitted answers are factually correct by
+                            comparing them with the ground truth, where an LLM 
+                            takes question, submitted answer, and ground truth as input and
+                            outputs the evaluation result. </li>
+                        <li><strong> DeepEval.SummarizationMetric</strong>: The summarization metric uses LLM-as-a-judge to determine whether your LLM (application) is generating factually correct summaries while including the necessary details from the original text. More details can be find via <a href="https://deepeval.com/docs/metrics-summarization" target="_blank">Link </a> </li>
+                           
+                    </ul>
+                </div>
+                <p class="lead">
+                    The final score for a research report is a weighted sum of its section scores. 
+                    The overall score of the submitted model is then calculated by averaging the scores of all reports.
+
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="section-lb" class="section-wrapper gray-bg">
+         <div class="container">
+        <div class="col-md-12">
+            <div class="row ">
+                <div class="section-title">
+                        <h1>Leaderboard</h1>
+                </div>
+            </div>
+            
+            <ul>
+            <li> <strong>Leaderboard on Validation Set</strong></li>
+            
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Model</th>
+                                <th>Overall Score</th>
+                                <th>United States</th>
+                                <th>United Kingdom</th>
+                                <th>China</th>
+                                <th>Hong Kong</th>
+                                <th>Singapore</th>
+                                <th>Australia</th>
+                                <th>Indonesian</th>
+                                <th>Malaysia</th>
+                            </tr>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>GPT-4.5</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td> 
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+             </div>
+             <li> <strong>Leaderboard on Test Set (Final)</strong></li>
+             <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Model Name</th>
+                            <th>Team Name</th>
+                            <th>Overall Score</th>
+                            <th>United States</th>
+                            <th>United Kingdom</th>
+                            <th>China</th>
+                            <th>Hong Kong</th>
+                            <th>Singapore</th>
+                            <th>Australia</th>
+                            <th>Indonesian</th>
+                            <th>Malaysia</th>
+                            <th>Date</th>
+                        </tr>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>GPT-4.5</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td> 
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+         </div>
+         </ul>
+   </div> 
+        </section>
+
+    <!-- .call-for-papers -->
+
+    <section id="section-submission" class="section-wrapper about-event ">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="section-title">
+                        <h1>Submission</h1>
+                    </div>
+                </div>
+                <p>
+                    To submit your predictions for the validation or test set, please send your files to 
+                    <strong><a href="mailto:finddr2025@gmail.com">finddr2025@gmail.com</a></strong>. 
+                    <br>
+                    Please use the following format for the email subject: 
+                    <span style="background-color: #ffff99; font-weight: bold;">FinDDR2025-&#123;Val/Test&#125;-&#123;Model Name&#125;-&#123;Team Name&#125;</span>
+                    
+                </p>
+                <p> <strong>Important:</strong> Each team may submit up to 3 times per set per day. Please allow up to two days for leaderboard updates.</p>
+
+            </div>
+        </div>
+    </section>
+
+
+ <section id="section-agenda" class="section-wrapper about-event gray-bg">
+        <div class="container">
+             <div class="col-md-12">
+                <div class="row ">
+                    <div class="section-title">
+                            <h1>Timeline</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="timeline-container" style="margin: 30px 0;">
+                        <div style="display: flex; align-items: center; flex-wrap: wrap; justify-content: space-between;">
+                            <div style="text-align: center; flex: 1;">
+                                <div style="font-weight: bold;">Challenge Starts</div>
+                                <div style="color: #666;">20 Aug 2025</div>
+                            </div>
+                            <div style="flex: 0 0 40px; text-align: center;">
+                                <span style="font-size: 2em; color: #bbb;">&#8594;</span>
+                            </div>
+                            <div style="text-align: center; flex: 1;">
+                                <div style="font-weight: bold;">Sample set release</div>
+                                <div style="color: #666;">25 Aug 2025</div>
+                            </div>
+                            <div style="flex: 0 0 40px; text-align: center;">
+                                <span style="font-size: 2em; color: #bbb;">&#8594;</span>
+                            </div>
+                            <div style="text-align: center; flex: 1;">
+                                <div style="font-weight: bold;">Val Set Release</div>
+                                <div style="color: #666;">15 Sep 2025</div>
+                            </div>
+                            <div style="flex: 0 0 40px; text-align: center;">
+                                <span style="font-size: 2em; color: #bbb;">&#8594;</span>
+                            </div>
+                            <div style="text-align: center; flex: 1;">
+                                <div style="font-weight: bold;">Test Set Release</div>
+                                <div style="color: #666;">6 Oct 2025</div>
+                            </div>
+                            <div style="flex: 0 0 40px; text-align: center;">
+                                <span style="font-size: 2em; color: #bbb;">&#8594;</span>
+                            </div>
+                            <div style="text-align: center; flex: 1;">
+                                <div style="font-weight: bold;">Challenge Ends</div>
+                                <div style="color: #666;">15 Oct 2025</div>
+                            </div>
+                            <div style="flex: 0 0 40px; text-align: center;">
+                                <span style="font-size: 2em; color: #bbb;">&#8594;</span>
+                            </div>
+                            <div style="text-align: center; flex: 1;">
+                                <div style="font-weight: bold;">Awards</div>
+                                <div style="color: #666;">16 Nov 2025</div>
+                            </div>
+                        </div>
+                    </div>
+
+                  
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <section id="section-organization" class="section-wrapper team">
+         <div class="container">
+        <div class="col-md-12">
+            <div class="row ">
+                <div class="section-title">
+                        <h1>Organizers</h1>
+                </div>
+            </div>
+           
+
+            <div class="row">
+                <div class="col-sm-6 col-lg-2">
+                    <figure class="thumbnail">
+                        <a href="https://fengbinzhu.github.io/" target="_blank"><img src="img/fengbin.jpg" class="img-responsive" alt="Image"></a>
+                        <figcaption class="caption text-center">
+                            <h4>Fengbin Zhu 
+                                <small>National University of Singapore</small>
+                            </h4>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-sm-6 col-lg-2">
+                    <figure class="thumbnail">
+                        <a href="https://scholar.google.com/citations?user=Mz2W41YAAAAJ&hl=en" target="_blank"><img src="img/chao.jpg" class="img-responsive" alt="Image"></a>
+                        <figcaption class="caption text-center">
+                            <h4>Chao Wang
+                                <small>6Estates Pte Ltd <br> Singapore</small>
+                            </h4>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                 <div class="col-sm-6 col-lg-2">
+                    <figure class="thumbnail">
+                        <a href="https://www.linkedin.com/in/liu-chang-carrol" target="_blank"><img src="img/chang.jpg" class="img-responsive" alt="Image"></a>
+                        <figcaption class="caption text-center">
+                            <h4>Chang Liu
+                                <small>Asian Institute of Digital Finance <br>Singapore</small>
+                            </h4>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-sm-6 col-lg-2">
+                    <figure class="thumbnail">
+                        <a href="https://imsure318.github.io/" target="_blank"><img src="img/shuo.jpg" class="img-responsive" alt="Image"></a>
+                        <figcaption class="caption text-center">
+                            <h4>Shuo Zhang
+                                <small>Bloomberg <br>United Kingdom</small>
+                            </h4>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                 
+               
+                 <div class="col-sm-6 col-lg-2">
+                    <figure class="thumbnail">
+                        <a href="https://yeslab.co" target="_blank"><img src="img/guangnan.jpg" class="img-responsive" alt="Image"></a>
+                        <figcaption class="caption text-center">
+                            <h4>Guangnan Ye 
+                                <small>Fudan University <br> China</small>
+                            </h4>
+                        </figcaption>
+                    </figure>
+                </div>
+        
+            </div>
+         
+            <div class="row">
+
+               
+
+                <div class="col-sm-6 col-lg-2">
+                    <figure class="thumbnail">
+                        <a href="https://www.comp.nus.edu.sg/disa/people/huangkw/" target="_blank"><img src="img/ke-wei.jpg" class="img-responsive" alt="Image"></a>
+                        <figcaption class="caption text-center">
+                            <h4>Ke-Wei Huang 
+                                <small>Asian Institute of Digital Finance <br>Singapore</small>
+                            </h4>
+                        </figcaption>
+                    </figure>
+                </div>
+               
+                <div class="col-sm-6 col-lg-2">
+                    <figure class="thumbnail">
+                        <a href="https://dblp.org/pid/55/5812.html" target="_blank"><img src="img/huanbo.jpg" class="img-responsive" alt="Image"></a>
+                        <figcaption class="caption text-center">
+                            <h4>Huanbo Luan 
+                                <small>6Estates Pte Ltd <br>  Singapore</small>
+                            </h4>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                 <div class="col-sm-6 col-lg-2">
+                    <figure class="thumbnail">
+                        <a href="https://www.chuatatseng.com/" target="_blank"><img src="img/chua.jpg" class="img-responsive" alt="Image"></a>
+                        <figcaption class="caption text-center">
+                            <h4>Tat-Seng Chua 
+                                <small>National University of Singapore</small>
+                            </h4>
+                        </figcaption>
+                    </figure>
+                </div>
+
+              
+
+            </div>
+            </div>
+             </div>
+          
+        </div>
+
+    </section> -->
+    <section id="section-organization" class="section-wrapper about-event">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row ">
+                        <div class="section-title">
+                                <h1>Organizers</h1>
+                        </div>
+                    </div>
+
+                    
+                    <h2>Project Leader</h2>
+                    <ul>
+                        <li>Fengbin Zhu, National University of Singapore</li>
+                        <li>Chao Wang, 6Estates Pte Ltd</li>
+                        <li>Tianhui Tan, Asian Institute of Digital Finance</li>
+                    </ul>
+
+                    <h2>Dataset Construction and Evaluation</h2>
+                    <ul>
+                        <li>Xiang Yao Ng, 6Estates Pte Ltd</li>
+                        <li>Ziyang Liu, 6Estates Pte Ltd</li>
+                        <li>Huanchang Zhuo, 6Estates Pte Ltd</li>
+                        <li>Min Xu, 6Estates Pte Ltd</li>
+                        <li>Stanley Marcelino, 6Estates Pte Ltd</li>
+                        <li>Jing Wang, 6Estates Pte Ltd</li>
+                        <li>Junfeng Li, National University of Singapore</li>
+                        <li>Chang Liu, Asian Institute of Digital Finance</li>
+                        <li>Xuan Yao, Asian Institute of Digital Finance</li>
+                        <li>Hao Zhuang, Asian Institute of Digital Finance</li>
+                        <li>Ruiqi Zheng, Asian Institute of Digital Finance</li>
+                        <li>Zixuan Wang, 6Estates Pte Ltd</li>
+                        <li>Xiaohan Ai, 6Estates Pte Ltd</li>
+                        <li>Lan Huang, 6Estates Pte Ltd</li>
+                        <li>Xin Lin, 6Estates Pte Ltd</li>
+                        <li>Xianwei Zeng, 6Estates Pte Ltd</li>
+                        <li>Jing Wang, 6Estates Pte Ltd</li>
+                    </ul>
+
+                    <h2>Advisor</h2>
+                    <ul>
+                        <li>Ke-Wei Huang, Asian Institute of Digital Finance</li>
+                        <li>Shuo Zhang, Bloomberg</li>
+                        <li>Fuli Feng, University of Science and Technology of China</li>
+                        <li>Huanbo Luan, 6Estates Pte Ltd</li>
+                        <li>Tat-Seng Chua, National University of Singapore</li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--section id="section-ajenda" class="section-wrapper section-ajenda">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h1>AJENDA</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="session">
+                        <time>8:30AM</time>
+                        <h2>Doors Open</h2>
+                    </div>
+
+                    <div class="session">
+                        <time>9:30 - 9:40AM</time>
+                        <h2>Opening Remarks</h2>
+                        <h3>Fiona Kuhn <span>CO-FOUNDER & CEO, MES</span></h3>
+                    </div>
+
+                    <div class="session">
+                        <time>9:50 - 10:05AM</time>
+                        <h2>Focus on the story: how publishers and brands succeed on today's internet.</h2>
+                        <h3>Marie Jung <span>HEAD OF PARTNERSHIPS, MES</span></h3>
+                    </div>
+
+                    <div class="session">
+                        <time>10:10 - 10:35AM</time>
+                        <h2>Keynote Presentation</h2>
+                        <h3>Zoe Kühn <span>CO-FOUNDER & CEO,, BOOSTER</span></h3>
+                    </div>
+
+
+                </div>
+                <div class="col-md-4">
+                    <div class="session">
+                        <time>11:15 - 1:35PM</time>
+                        <h2>Brand Innovator Spotlight</h2>
+                        <h3>Tim Rams <span>DIRECTOR, CONTENT MARKETING, FIXS</span></h3>
+                        <h3>Daniel Fuchs <span>DIRECTOR OF MEDIA SERVICES, MENGO</span></h3>
+                        <h3>Hannah Keller <span>CO-FOUNDER, LOLO</span></h3>
+                    </div>
+
+                    <div class="session">
+                        <time>1:35 - 2:20PM</time>
+                        <h2>Fireside Chat: Making Native Work - An Agency Perspective</h2>
+                        <h3>Fiona Kuhn <span>CO-FOUNDER & CEO, MES</span></h3>
+                    </div>
+
+                    <div class="session">
+                        <time>2:20 - 3:20PM</time>
+                        <h2>Lunch Break</h2>
+                    </div>
+
+
+                </div>
+                <div class="col-md-4">
+                    <div class="session">
+                        <time>3:20PM - 4PM</time>
+                        <h2>Native Creatives Winners Presentation</h2>
+                        <h3>Johann Graf <span>VP Sales, MES</span></h3>
+                    </div>
+
+                    <div class="session">
+                        <time>4:05 - 5:30PM</time>
+                        <h2>Case Study: XYR</h2>
+                        <h3>Jan Pfeiffer <span>HEAD OF COMMUNICATIONS, TOT</span></h3>
+                        <h3>Marie Ilsner <span>PRESIDENT, PADDA</span></h3>
+                        <h3>Hannes Beck <span>MANAGING DIRECTOR, DEP</span></h3>
+                    </div>
+
+
+                    <div class="session">
+                        <time>5:30 - 6:00PM</time>
+                        <h2>Cocktail and Networking Party</h2>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </section-->
+
+
+    <!--section id="section-partner" class="section-wrapper client-logo">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h1>PARTNERS</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
+                    <a href="#"><img src="img/logo-client-1.jpg" alt="Image"></a>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
+                    <a href="#"><img src="img/logo-client-2.jpg" alt="Image"></a>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
+                    <a href="#"><img src="img/logo-client-3.jpg" alt="Image"></a>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
+                    <a href="#"><img src="img/logo-client-4.jpg" alt="Image"></a>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
+                    <a href="#"><img src="img/logo-client-5.jpg" alt="Image"></a>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
+                    <a href="#"><img src="img/logo-client-6.jpg" alt="Image"></a>
+                </div>
+            </div>
+        </div>
+    </section-->
+    <!-- .client-logo -->
+
+    <section id="section-venue" class="section-wrapper  gray-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h1>Venue</h1>
+
+                        <p>FinDDR 2025 will be co-located with The 6th International ACM International Conference on AI in Finance at <b>Sheraton Towers Singapore</b>. 
+                        <div class="row">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7726041226874!2d103.83160517967713!3d1.3118297583048706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19ec373be241%3A0x4d6f760955b0949e!2sSheraton%20Towers%20Singapore!5e0!3m2!1sen!2ssg!4v1756006367144!5m2!1sen!2ssg" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row-->
+
+
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="copyright-section">
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="copytext text-center">&copy;All rights reserved | Design By: <a href="https://uicookies.com">uiCookies</a></div>
+                </div>
+            </div>
+            <!-- .container -->
+        </div>
+        <!-- .copyright-section -->
+    </footer>
+    <!-- .footer -->
+
+</div>
+<!-- #main-wrapper -->
+
+
+<!-- jquery -->
+<script src="js/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="js/jquery.easing.min.js"></script>
+
+<!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+<!-- <script src="https://maps.googleapis.com/maps/api/js"></script> -->
+
+<!--<script src="js/one-page-nav.js"></script>-->
+<script src="js/scripts.js"></script>
+</body>
+</html>
