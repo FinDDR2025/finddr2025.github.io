@@ -250,8 +250,44 @@ table.gridtable td {
                         </p>
                     
                         <div class="table-responsive">
-                            <table class="table table-bordered table-striped">
-                                <thead class="thead-dark">
+                            <style>
+                                .custom-market-table th, .custom-market-table td {
+                                    text-align: center;
+                                    vertical-align: middle;
+                                }
+                                .custom-market-table thead th {
+                                    background:#ffe082;
+                                    color: #000;
+                                    font-weight: bold;
+                                    font-size: 1.1em;
+                                    border-bottom: 2px solid  #ffe082;
+                                }
+                                .custom-market-table tbody tr:nth-child(even) {
+                                    background-color: #fcfcf8;
+                                }
+                                .custom-market-table tbody tr:nth-child(odd) {
+                                    background-color: #e9ecef;
+                                }
+                                .custom-market-table tbody tr:last-child td {
+                                    font-weight: bold;
+                                    /* background: #ffe082; */
+                                    color: #333;
+                                    /* border-top: 2px solid  #ffe082;; */
+                                }
+                                .custom-market-table td:first-child {
+                                    font-weight: 500;
+                                }
+                                .custom-market-table td {
+                                    font-size: 1em;
+                                }
+                                .custom-market-table .flag-icon {
+                                    width: 22px;
+                                    vertical-align: middle;
+                                    margin-right: 6px;
+                                }
+                            </style>
+                            <table class="table table-bordered table-striped custom-market-table">
+                                <thead>
                                     <tr>
                                         <th>Market</th>
                                         <th>Sample Set</th>
@@ -262,49 +298,49 @@ table.gridtable td {
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>US</td>
+                                        <td><img class="flag-icon" src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/us.svg" alt="US"> US</td>
                                         <td>1</td>
                                         <td>6</td>
                                         <td>6</td>
                                     </tr>
                                     <tr>
-                                        <td>UK</td>
+                                        <td><img class="flag-icon" src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/gb.svg" alt="UK"> UK</td>
                                         <td>1</td>
                                         <td>6</td>
                                         <td>6</td>
                                     </tr>
                                     <tr>
-                                        <td>China</td>
+                                        <td><img class="flag-icon" src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/cn.svg" alt="China"> China</td>
                                         <td>1</td>
                                         <td>6</td>
                                         <td>6</td>
                                     </tr>
                                     <tr>
-                                        <td>Hong Kong</td>
+                                        <td><img class="flag-icon" src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/hk.svg" alt="Hong Kong"> Hong Kong</td>
                                         <td>1</td>
                                         <td>6</td>
                                         <td>6</td>
                                     </tr>
                                     <tr>
-                                        <td>Singapore</td>
+                                        <td><img class="flag-icon" src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/sg.svg" alt="Singapore"> Singapore</td>
                                         <td>1</td>
                                         <td>6</td>
                                         <td>6</td>
                                     </tr>
                                     <tr>
-                                        <td>Australia</td>
+                                        <td><img class="flag-icon" src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/au.svg" alt="Australia"> Australia</td>
                                         <td>1</td>
                                         <td>6</td>
                                         <td>6</td>
                                     </tr>
                                     <tr>
-                                        <td>Indonesian</td>
+                                        <td><img class="flag-icon" src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/id.svg" alt="Indonesia"> Indonesia</td>
                                         <td>1</td>
                                         <td>6</td>
                                         <td>6</td>
                                     </tr> 
                                     <tr>
-                                        <td>Malaysia</td>
+                                        <td><img class="flag-icon" src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/my.svg" alt="Malaysia"> Malaysia</td>
                                         <td>1</td>
                                         <td>6</td>
                                         <td>6</td>
@@ -368,28 +404,62 @@ table.gridtable td {
             <li> <strong>Leaderboard on Validation Set</strong></li>
             
                 <div class="table-responsive">
-                    <table class="table table-bordered table-striped">
-                        <thead class="thead-dark">
+                    <style>
+                        .custom-leaderboard-table {
+                            background: #fffbe7;
+                            border-radius: 12px;
+                            overflow: hidden;
+                            box-shadow: 0 4px 24px rgba(255, 204, 51, 0.10);
+                        }
+                        .custom-leaderboard-table th, .custom-leaderboard-table td {
+                            text-align: center;
+                            vertical-align: middle;
+                            padding: 12px 8px;
+                        }
+                        .custom-leaderboard-table th {
+                            background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%);
+                            color: #222;
+                            font-weight: bold;
+                            font-size: 16px;
+                            border-bottom: 2px solid #ffe066;
+                        }
+                        .custom-leaderboard-table tr:nth-child(even) td {
+                            background: #fff8d6;
+                        }
+                        .custom-leaderboard-table tr:hover td {
+                            background: #fff3b0;
+                            transition: background 0.2s;
+                        }
+                        .custom-leaderboard-table td {
+                            font-size: 15px;
+                        }
+                    </style>
+                    <table class="table table-bordered table-striped custom-leaderboard-table">
+                        <thead>
                             <tr>
-                                <th>Model</th>
-                                <th>Overall Score</th>
-                                <th>United States</th>
-                                <th>United Kingdom</th>
-                                <th>China</th>
-                                <th>Hong Kong</th>
-                                <th>Singapore</th>
-                                <th>Australia</th>
-                                <th>Indonesian</th>
-                                <th>Malaysia</th>
-                            </tr>
+                                <th><i class="fa fa-robot" aria-hidden="true"></i> Model</th>
+                                <th><i class="fa fa-users" aria-hidden="true"></i> Team</th>
+                                <th><i class="fa fa-star" aria-hidden="true"></i> Overall Score</th>
+        
+                                <th><img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/us.svg" alt="US" width="22" style="vertical-align:middle;"><br>US</th>
+                                <th><img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/gb.svg" alt="UK" width="22" style="vertical-align:middle;"><br>UK</th>
+                                <th><img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/cn.svg" alt="China" width="22" style="vertical-align:middle;"><br>China</th>
+                                <th><img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/hk.svg" alt="HK" width="22" style="vertical-align:middle;"> <br>HK</th>
+                                <th><img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/sg.svg" alt="SG" width="22" style="vertical-align:middle;"> <br>Singapore</th>
+                                <th><img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/au.svg" alt="AU" width="22" style="vertical-align:middle;"> <br>Australia</th>
+                                <th><img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/id.svg" alt="ID" width="22" style="vertical-align:middle;"> <br>Indonesia</th>
+                                <th><img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/my.svg" alt="MY" width="22" style="vertical-align:middle;"><br> Malaysia</th>
+                                <th><i class="fa fa-clock-o" aria-hidden="true"></i> Last Update</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>GPT-4.5</td>
+                                <td><span style="font-weight:bold; color:#ffb347;">GPT-4.5</span></td>
+                                <td>-</td>
                                 <td>-</td>
                                 <td>-</td>
                                 <td>-</td> 
+                                <td>-</td>
                                 <td>-</td>
                                 <td>-</td>
                                 <td>-</td>
@@ -402,30 +472,31 @@ table.gridtable td {
              </div>
              <li> <strong>Leaderboard on Test Set (Final)</strong></li>
              <div class="table-responsive">
-                <table class="table table-bordered table-striped">
-                    <thead class="thead-dark">
+                <table class="table table-bordered table-striped custom-leaderboard-table">
+                    <thead>
                         <tr>
-                            <th>Model Name</th>
-                            <th>Team Name</th>
-                            <th>Overall Score</th>
-                            <th>United States</th>
-                            <th>United Kingdom</th>
-                            <th>China</th>
-                            <th>Hong Kong</th>
-                            <th>Singapore</th>
-                            <th>Australia</th>
-                            <th>Indonesian</th>
-                            <th>Malaysia</th>
-                            <th>Date</th>
-                        </tr>
+                            <th><i class="fa fa-robot" aria-hidden="true"></i> Model</th>
+                            <th><i class="fa fa-users" aria-hidden="true"></i> Team</th>
+                            <th><i class="fa fa-star" aria-hidden="true"></i> Overall Score</th>
+                            <th><img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/us.svg" alt="US" width="22" style="vertical-align:middle;"><br>US</th>
+                            <th><img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/gb.svg" alt="UK" width="22" style="vertical-align:middle;"><br>UK</th>
+                            <th><img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/cn.svg" alt="China" width="22" style="vertical-align:middle;"><br>China</th>
+                            <th><img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/hk.svg" alt="HK" width="22" style="vertical-align:middle;"> <br>HK</th>
+                            <th><img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/sg.svg" alt="SG" width="22" style="vertical-align:middle;"> <br>Singapore</th>
+                            <th><img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/au.svg" alt="AU" width="22" style="vertical-align:middle;"> <br>Australia</th>
+                            <th><img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/id.svg" alt="ID" width="22" style="vertical-align:middle;"> <br>Indonesia</th>
+                            <th><img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/my.svg" alt="MY" width="22" style="vertical-align:middle;"><br> Malaysia</th>
+                            <th><i class="fa fa-clock-o" aria-hidden="true"></i> Last Update</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>GPT-4.5</td>
+                            <td><span style="font-weight:bold; color:#ffb347;">GPT-4.5</span></td>
                             <td>-</td>
                             <td>-</td>
                             <td>-</td> 
+                            <td>-</td>
+                            <td>-</td>
                             <td>-</td>
                             <td>-</td>
                             <td>-</td>
