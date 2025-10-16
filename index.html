@@ -109,6 +109,11 @@
                 </div>
                 <div class="row">
                     <div class="alert alert-info" role="alert" style="background-color: #e3f2fd; border-color: #b3e5fc; color: #01579b;">
+
+                        <p><strong>October 16, 2025:</strong></p>
+                        <ul>
+                            <li>The official leaderboard is now live! Check the <a href="#section-lb" class="page-scroll" style="font-weight: bold;">Leaderboard</a> section for the latest rankings.</li>
+                        </ul>
                         <p><strong>October 9, 2025:</strong></p>
                         <ul>
                             <li>The challenge deadline has been extended by one week. The new submission deadline is <strong>October 22, 2025</strong>. The <a href="#section-agenda" class="page-scroll" style="font-weight: bold;">Timeline</a> has been updated.</li>
@@ -535,16 +540,54 @@ table.gridtable td {
                             transition: background 0.2s;
                         }
                         .custom-leaderboard-table td {
+                            font-size: 14px;
+                        }
+                        /* Rank styling with medals */
+                        .rank-cell {
+                            font-weight: bold;
+                            font-size: 18px;
+                        }
+                        .rank-1 { color: #FFD700; text-shadow: 0 0 10px rgba(255, 215, 0, 0.3); }
+                        .rank-2 { color: #C0C0C0; text-shadow: 0 0 10px rgba(192, 192, 192, 0.3); }
+                        .rank-3 { color: #CD7F32; text-shadow: 0 0 10px rgba(205, 127, 50, 0.3); }
+
+                        /* Team name styling */
+                        .team-name {
+                            font-weight: 600;
+                            color: #ff8c42;
                             font-size: 15px;
                         }
+
+                        /* Full marks row highlight */
+                        .full-marks-row {
+                            background: linear-gradient(90deg, #fff4d6 0%, #ffe8b3 100%) !important;
+                            font-weight: 600;
+                            border-top: 2px solid #ffb347;
+                            border-bottom: 2px solid #ffb347;
+                        }
+
+                        /* Score highlighting */
+                        .score-high {
+                            color: #27ae60;
+                            font-weight: 600;
+                        }
+
+                        /* Flag styling */
+                        .flag-icon {
+                            vertical-align: middle;
+                            border-radius: 3px;
+                            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                        }
                     </style>
-                    <table class="table table-bordered table-striped custom-leaderboard-table">
+                    <table class="table table-striped custom-leaderboard-table">
                         <thead>
                             <tr>
-                                <th><i class="fa fa-robot" aria-hidden="true"></i> Model</th>
+                                <th><i class="fa fa-trophy" aria-hidden="true"></i> Rank</th>
                                 <th><i class="fa fa-users" aria-hidden="true"></i> Team</th>
+                                <th><i class="fa fa-robot" aria-hidden="true"></i> Model</th>
+                                <th><i class="fa fa-building" aria-hidden="true"></i> Organization</th>
                                 <th><i class="fa fa-star" aria-hidden="true"></i> Overall Score</th>
-        
+
                                 <th><img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/us.svg" alt="US" width="22" style="vertical-align:middle;"><br>US</th>
                                 <th><img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/gb.svg" alt="UK" width="22" style="vertical-align:middle;"><br>UK</th>
                                 <th><img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/cn.svg" alt="China" width="22" style="vertical-align:middle;"><br>China</th>
@@ -557,30 +600,146 @@ table.gridtable td {
                             </tr>
                         </thead>
                         <tbody>
+                            <tr class="full-marks-row">
+                                <td>🎯</td>
+                                <td class="team-name">Full Marks</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td><strong>240</strong></td>
+                                <td>240</td>
+                                <td>240</td>
+                                <td>240</td>
+                                <td>240</td>
+                                <td>240</td>
+                                <td>240</td>
+                                <td>240</td>
+                                <td>240</td>
+                                <td><small>2025/10/02</small></td>
+                            </tr>
                             <tr>
-                                <td><span style="font-weight:bold; color:#ffb347;">GPT-4.5</span></td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td> 
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
+                                <td class="rank-cell rank-1">🥇</td>
+                                <td class="team-name">Baseline</td>
+                                <td>Deepseek-v3.2</td>
+                                <td>Official</td>
+                                <td class="score-high">144.75</td>
+                                <td>160.88</td>
+                                <td>130.47</td>
+                                <td>140.56</td>
+                                <td>146.76</td>
+                                <td>125.25</td>
+                                <td>150.66</td>
+                                <td>147.06</td>
+                                <td>156.38</td>
+                                <td><small>2025/10/15</small></td>
+                            </tr>
+                            <tr>
+                                <td class="rank-cell rank-2">🥈</td>
+                                <td class="team-name">Baseline</td>
+                                <td>GPT-5-MINI with File Search</td>
+                                <td>Official</td>
+                                <td class="score-high">144.59</td>
+                                <td>153.11</td>
+                                <td>137.82</td>
+                                <td>124.28</td>
+                                <td>155.86</td>
+                                <td>135.76</td>
+                                <td>160.85</td>
+                                <td>137.14</td>
+                                <td>151.88</td>
+                                <td><small>2025/10/15</small></td>
+                            </tr>
+                            <tr>
+                                <td class="rank-cell rank-3">🥉</td>
+                                <td class="team-name">Baseline</td>
+                                <td>GPT-5-NANO</td>
+                                <td>Official</td>
+                                <td class="score-high">130.84</td>
+                                <td>149.71</td>
+                                <td>124.96</td>
+                                <td>117.54</td>
+                                <td>105.38</td>
+                                <td>111.76</td>
+                                <td>150.95</td>
+                                <td>143.31</td>
+                                <td>143.13</td>
+                                <td><small>2025/10/15</small></td>
+                            </tr>
+                            <tr>
+                                <td class="rank-cell">4</td>
+                                <td class="team-name">Baseline</td>
+                                <td>GPT-OSS-20B</td>
+                                <td>Official</td>
+                                <td>108.02</td>
+                                <td>115.54</td>
+                                <td>82.02</td>
+                                <td>89.8</td>
+                                <td>103.55</td>
+                                <td>107.43</td>
+                                <td>126.46</td>
+                                <td>122.72</td>
+                                <td>116.61</td>
+                                <td><small>2025/10/15</small></td>
+                            </tr>
+                            <tr>
+                                <td class="rank-cell">5</td>
+                                <td class="team-name">ICT-NDST</td>
+                                <td>ICTDR</td>
+                                <td>Chinese Academy of Sciences</td>
+                                <td>95.51</td>
+                                <td>118.29</td>
+                                <td>89.64</td>
+                                <td>56.26</td>
+                                <td>84.86</td>
+                                <td>88.26</td>
+                                <td>114.87</td>
+                                <td>94.53</td>
+                                <td>117.42</td>
+                                <td><small>2025/10/11</small></td>
+                            </tr>
+                            <tr>
+                                <td class="rank-cell">6</td>
+                                <td class="team-name">afinit</td>
+                                <td>afinit_fin_report_agent_v1</td>
+                                <td>afinit</td>
+                                <td>87.47</td>
+                                <td>99.95</td>
+                                <td>77.18</td>
+                                <td>56.36</td>
+                                <td>70.17</td>
+                                <td>83.93</td>
+                                <td>110.35</td>
+                                <td>85.57</td>
+                                <td>116.29</td>
+                                <td><small>2025/10/10</small></td>
+                            </tr>
+                            <tr>
+                                <td class="rank-cell">7</td>
+                                <td class="team-name">SI4Fin</td>
+                                <td>Qwen3RAG</td>
+                                <td>A*STAR</td>
+                                <td>38.78</td>
+                                <td>28.95</td>
+                                <td>24.51</td>
+                                <td>37.01</td>
+                                <td>49.19</td>
+                                <td>35.75</td>
+                                <td>60.7</td>
+                                <td>35.66</td>
+                                <td>38.45</td>
+                                <td><small>2025/10/02</small></td>
                             </tr>
                         </tbody>
                     </table>
              </div>
              <li> <strong>Leaderboard on Test Set<small><sup>1</sup></small> (Final)</strong></li>
              <div class="table-responsive">
-                <table class="table table-bordered table-striped custom-leaderboard-table">
+                <table class="table table-striped custom-leaderboard-table">
                     <thead>
                         <tr>
-                            <th><i class="fa fa-robot" aria-hidden="true"></i> Model</th>
+                            <th><i class="fa fa-trophy" aria-hidden="true"></i> Rank</th>
                             <th><i class="fa fa-users" aria-hidden="true"></i> Team</th>
+                            <th><i class="fa fa-robot" aria-hidden="true"></i> Model</th>
+                            <th><i class="fa fa-building" aria-hidden="true"></i> Organization</th>
                             <th><i class="fa fa-star" aria-hidden="true"></i> Overall Score</th>
                             <th><img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/us.svg" alt="US" width="22" style="vertical-align:middle;"><br>US</th>
                             <th><img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/gb.svg" alt="UK" width="22" style="vertical-align:middle;"><br>UK</th>
@@ -598,7 +757,9 @@ table.gridtable td {
                             <td><span style="font-weight:bold; color:#ffb347;">GPT-4.5</span></td>
                             <td>-</td>
                             <td>-</td>
-                            <td>-</td> 
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
                             <td>-</td>
                             <td>-</td>
                             <td>-</td>
@@ -616,7 +777,7 @@ table.gridtable td {
                 </p>
          </div>
          </ul>
-   </div> 
+   </div>
         </section>
 
     <!-- .call-for-papers -->
@@ -634,8 +795,10 @@ table.gridtable td {
                     <strong><a href="mailto:finddr2025@gmail.com">finddr2025@gmail.com</a></strong>. The  predicted report should use the Case ID as the file name like the sample reports. For example, if the Case ID is <u>"val001"</u>, the file name should be <u>"val001.md"</u>.
                     <br>
                     Please use the following subject in your email:
-                    <span style="background-color: #ffff99; font-weight: bold;">FinDDR2025-&#123;Val/Test&#125;-&#123;Model Name&#125;-&#123;Team Name&#125;</span>
-
+                    <span style="background-color: #ffff99; font-weight: bold;">FinDDR2025-&#123;Val/Test&#125;-&#123;Method Name&#125;-&#123;Team Name&#125;</span>
+                </p>
+                <p>
+                    The <strong>Method Name</strong> should be a unique name for your system/method, not just the name of the base model used (e.g., "MyAwesomeMethod", "FinAgent-v2", not "GPT-4").
                 </p>
                 <p>
                     <strong>Team Member Information:</strong> Please include the names and affiliations of all team members directly in the body of your submission email. Each team may have up to <strong>6 members</strong>. We will consider the team member list from your most recent submission as the final version for your team.
